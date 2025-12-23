@@ -56,7 +56,6 @@ body {
   align-items: center;
   justify-content: center;
   color: var(--muted);
-  font-size: 14px;
 }
 
 h1 {
@@ -112,26 +111,6 @@ h2 {
   box-shadow: 0 20px 36px rgba(15,23,42,0.08);
 }
 
-/* TECH */
-.tech-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 22px;
-}
-
-.tech {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  color: var(--muted);
-  font-weight: 500;
-}
-
-.tech i {
-  font-size: 26px;
-  color: var(--accent);
-}
-
 /* LISTS */
 ul {
   margin-top: 16px;
@@ -141,6 +120,40 @@ ul {
 li {
   margin-bottom: 10px;
   color: var(--muted);
+}
+
+/* AUTO SCROLL TECH STRIP */
+.tech-scroll {
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 18px 0;
+  background: #f8fafc;
+}
+
+.tech-track {
+  display: flex;
+  gap: 48px;
+  animation: scroll 32s linear infinite;
+}
+
+.tech-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--muted);
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.tech-item i {
+  font-size: 28px;
+  color: var(--accent);
+}
+
+@keyframes scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
 }
 
 /* NIRVI GRID */
@@ -198,16 +211,16 @@ footer {
 <!-- HERO -->
 <div class="hero">
   <div class="photo">
-    <img src="assets/profile.jpeg" class="photo">
+    <img src="assets/profile.jpeg" class="photo" alt="Bhaskar Mettlapalli">
   </div>
 
   <div>
     <h1>Bhaskar Mettlapalli</h1>
-    <div class="role">Senior Java Backend Engineer · Distributed Systems</div>
+    <div class="role">Senior Software Engineer @ Equence Technologies Pvt Ltd</div>
     <div class="subtitle">
       Backend engineer with 4.7+ years of experience building scalable,
-      high-throughput systems. I specialize in Java 21, event-driven
-      architectures, JVM concurrency, and production-grade reliability.
+      high-throughput systems. Strong focus on Java 21, event-driven
+      architectures, JVM concurrency, and production reliability.
     </div>
 
     <div class="links" style="margin-top:20px">
@@ -230,9 +243,14 @@ footer {
     <strong>5 crore+ API calls per day</strong>, focusing on reliability,
     concurrency control, and latency optimization.
     <br><br>
-    Recently, I independently designed and built the complete backend for
-    a startup product (NIRVI), owning architecture, implementation,
-    deployment, and observability end-to-end.
+    Alongside my professional role, I independently designed and built the
+    complete backend for a startup initiative called <strong>NIRVI</strong>.
+    I owned the system end-to-end — architecture, service boundaries,
+    data modeling, async workflows, deployment, and observability.
+    <br><br>
+    While the startup could not continue due to funding constraints,
+    the engineering work reflects real-world product development,
+    scalability planning, and production-grade backend design.
   </div>
 </section>
 
@@ -250,26 +268,35 @@ footer {
       <li>Building observability from day one</li>
     </ul>
     I enjoy working close to the JVM — tuning memory, reducing GC pressure,
-    and leveraging <strong>Java 21 virtual threads</strong> for high-concurrency systems.
+    and leveraging <strong>Java 21 virtual threads</strong> for
+    high-concurrency systems.
   </div>
 </section>
 
-<!-- TECH -->
+<!-- TECH STACK -->
 <section>
   <h2>Core Technology Stack</h2>
-  <div class="card tech-grid">
-    <div class="tech"><i class="devicon-java-plain"></i> Java 21 / Virtual Threads</div>
-    <div class="tech"><i class="devicon-spring-plain"></i> Spring Boot</div>
-    <div class="tech"><i class="devicon-docker-plain"></i> Docker</div>
-    <div class="tech"><i class="devicon-apachekafka-original"></i> Kafka</div>
-    <div class="tech"><i class="fas fa-exchange-alt"></i> RabbitMQ</div>
-    <div class="tech"><i class="devicon-redis-plain"></i> Redis</div>
-    <div class="tech"><i class="fas fa-network-wired"></i> Cassandra</div>
-    <div class="tech"><i class="devicon-mysql-plain"></i> MySQL</div>
-    <div class="tech"><i class="devicon-mongodb-plain"></i> MongoDB</div>
-    <div class="tech"><i class="fas fa-gateway"></i> APISIX Gateway</div>
-    <div class="tech"><i class="fas fa-lock"></i> JWT / Auth</div>
-    <div class="tech"><i class="fas fa-chart-line"></i> Grafana / Loki</div>
+  <div class="card tech-scroll">
+    <div class="tech-track">
+      <div class="tech-item"><i class="devicon-java-plain"></i> Java 21</div>
+      <div class="tech-item"><i class="devicon-spring-plain"></i> Spring Boot</div>
+      <div class="tech-item"><i class="devicon-docker-plain"></i> Docker</div>
+      <div class="tech-item"><i class="devicon-apachekafka-original"></i> Kafka</div>
+      <div class="tech-item"><i class="fas fa-exchange-alt"></i> RabbitMQ</div>
+      <div class="tech-item"><i class="devicon-redis-plain"></i> Redis</div>
+      <div class="tech-item"><i class="fas fa-network-wired"></i> Cassandra</div>
+      <div class="tech-item"><i class="devicon-mysql-plain"></i> MySQL</div>
+      <div class="tech-item"><i class="devicon-mongodb-plain"></i> MongoDB</div>
+      <div class="tech-item"><i class="fas fa-gateway"></i> APISIX</div>
+      <div class="tech-item"><i class="fas fa-lock"></i> JWT</div>
+      <div class="tech-item"><i class="fas fa-chart-line"></i> Grafana / Loki</div>
+
+      <!-- duplicate for smooth scroll -->
+      <div class="tech-item"><i class="devicon-java-plain"></i> Java 21</div>
+      <div class="tech-item"><i class="devicon-spring-plain"></i> Spring Boot</div>
+      <div class="tech-item"><i class="devicon-docker-plain"></i> Docker</div>
+      <div class="tech-item"><i class="devicon-apachekafka-original"></i> Kafka</div>
+    </div>
   </div>
 </section>
 
@@ -278,27 +305,21 @@ footer {
   <h2>NIRVI – Production-Grade Backend Architecture</h2>
   <div class="card">
     <p style="color:var(--muted)">
-      This diagram represents the real backend architecture I designed
-      and implemented for the NIRVI startup. The focus was on scalability,
+      This diagram represents the backend architecture I designed and
+      implemented for the NIRVI startup, with a focus on scalability,
       fault isolation, asynchronous processing, and operational visibility.
     </p>
 
     <img src="assets/Nirvi.jpg" alt="NIRVI Architecture" class="arch-img">
 
     <ul>
-      <li>API Gateway (APISIX) for auth, routing, and rate limiting</li>
-      <li>Microservices for user, vendor, payment, order, and admin domains</li>
+      <li>API Gateway (APISIX) for routing, auth, and rate limiting</li>
+      <li>Microservices for user, vendor, order, payment, and admin domains</li>
       <li>Event-driven workflows using RabbitMQ</li>
       <li>Redis for hot-path caching and DB protection</li>
-      <li>Order assignment engine for vendor/driver matching</li>
-      <li>Notification engines (Firebase + AI-based content)</li>
-      <li>Centralized logging with Grafana & Loki</li>
+      <li>Notification engines including Firebase and AI-based content</li>
+      <li>Centralized logging and observability via Grafana & Loki</li>
     </ul>
-
-    <p style="margin-top:20px;color:var(--muted)">
-      All services were containerized with Docker, with CI/CD handled via GitHub
-      and deployments automated to VPS infrastructure.
-    </p>
   </div>
 </section>
 
@@ -329,16 +350,17 @@ footer {
   <div class="card">
     <strong>Equence Technologies</strong> — Software Engineer (2022–Present)
     <ul>
-      <li>Built CPaaS messaging platforms at scale</li>
-      <li>Handled 5Cr+ API calls/day</li>
-      <li>Migrated services to Java 21 using virtual threads</li>
-      <li>Reduced error rates by 30% and improved performance by 25%</li>
+      <li>Worked on CPaaS messaging platforms used by enterprise clients</li>
+      <li>Handled high-throughput systems processing 5Cr+ API calls/day</li>
+      <li>Owned backend modules involving Redis, Cassandra, and async processing</li>
+      <li>Migrated critical services to Java 21 using virtual threads</li>
+      <li>Improved system reliability, reducing error rates by 30%</li>
     </ul>
 
     <strong>Iconic Etech</strong> — Java Developer (2021–2022)
     <ul>
-      <li>JVM tuning, memory optimization</li>
-      <li>Backend feature development and bug fixing</li>
+      <li>JVM tuning and memory optimization</li>
+      <li>Backend feature development and production bug fixes</li>
     </ul>
   </div>
 </section>
