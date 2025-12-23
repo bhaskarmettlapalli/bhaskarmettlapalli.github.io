@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Bhaskar Mettlapalli | Senior Backend Engineer</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<!-- Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+
+<!-- Font -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --bg:#f8fafc;
+  --card:#ffffff;
+  --border:#e5e7eb;
+  --text:#0f172a;
+  --muted:#475569;
+  --accent:#2563eb;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.75;
+}
+
+.container {
+  max-width: 1120px;
+  margin: auto;
+  padding: 64px 20px;
+}
+
+/* HERO */
+.hero {
+  display: grid;
+  grid-template-columns: 170px 1fr;
+  gap: 44px;
+  align-items: center;
+  margin-bottom: 80px;
+}
+
+.photo {
+  width: 170px;
+  height: 170px;
+  border-radius: 18px;
+  background: #e2e8f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+h1 {
+  margin: 0;
+  font-size: 40px;
+  font-weight: 700;
+}
+
+.role {
+  color: var(--accent);
+  font-weight: 600;
+  margin-top: 6px;
+}
+
+.subtitle {
+  margin-top: 14px;
+  color: var(--muted);
+  max-width: 860px;
+}
+
+.links a {
+  margin-right: 18px;
+  text-decoration: none;
+  font-weight: 500;
+  color: var(--text);
+}
+
+.links i {
+  color: var(--accent);
+}
+
+/* SECTIONS */
+section {
+  margin-top: 90px;
+}
+
+h2 {
+  font-size: 28px;
+  margin-bottom: 28px;
+}
+
+/* CARD */
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 40px;
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 20px 36px rgba(15,23,42,0.08);
+}
+
+/* TECH */
+.tech-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 22px;
+}
+
+.tech {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  color: var(--muted);
+  font-weight: 500;
+}
+
+.tech i {
+  font-size: 26px;
+  color: var(--accent);
+}
+
+/* LISTS */
+ul {
+  margin-top: 16px;
+  padding-left: 22px;
+}
+
+li {
+  margin-bottom: 10px;
+  color: var(--muted);
+}
+
+/* NIRVI GRID */
+.nirvi-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 22px;
+  margin-top: 32px;
+}
+
+.nirvi {
+  background: #f1f5f9;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 24px;
+}
+
+.nirvi strong {
+  color: var(--text);
+}
+
+/* ARCH IMAGE */
+.arch-img {
+  width: 100%;
+  margin: 32px 0;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+}
+
+/* FOOTER */
+footer {
+  margin-top: 120px;
+  padding-top: 32px;
+  border-top: 1px solid var(--border);
+  text-align: center;
+  color: var(--muted);
+}
+
+/* MOBILE */
+@media(max-width:768px) {
+  .hero {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .photo {
+    margin: auto;
+  }
+}
+</style>
+</head>
+
+<body>
+<div class="container">
+
+<!-- HERO -->
+<div class="hero">
+  <div class="photo">
+    <!-- Replace with <img src="profile.jpg" class="photo"> -->
+    Profile Photo
+  </div>
+
+  <div>
+    <h1>Bhaskar Mettlapalli</h1>
+    <div class="role">Senior Java Backend Engineer · Distributed Systems</div>
+    <div class="subtitle">
+      Backend engineer with 4.7+ years of experience building scalable,
+      high-throughput systems. I specialize in Java 21, event-driven
+      architectures, JVM concurrency, and production-grade reliability.
+    </div>
+
+    <div class="links" style="margin-top:20px">
+      <a href="https://github.com/bhaskarmettlapalli"><i class="fab fa-github"></i> GitHub</a>
+      <a href="https://linkedin.com/in/bhaskar-mettlapalli"><i class="fab fa-linkedin"></i> LinkedIn</a>
+      <a href="mailto:bhaskarmettlapalli1@gmail.com"><i class="fas fa-envelope"></i> Email</a>
+    </div>
+  </div>
+</div>
+
+<!-- REAL WORLD -->
+<section>
+  <h2>What I’ve Built in the Real World</h2>
+  <div class="card">
+    Over the last 4.7+ years, I’ve built backend systems that operate under
+    real-world constraints — high traffic, partial failures, and evolving
+    business requirements.
+    <br><br>
+    I’ve worked on CPaaS messaging platforms processing
+    <strong>5 crore+ API calls per day</strong>, focusing on reliability,
+    concurrency control, and latency optimization.
+    <br><br>
+    Recently, I independently designed and built the complete backend for
+    a startup product (NIRVI), owning architecture, implementation,
+    deployment, and observability end-to-end.
+  </div>
+</section>
+
+<!-- ENGINEERING APPROACH -->
+<section>
+  <h2>How I Approach Backend Engineering</h2>
+  <div class="card">
+    I believe backend engineering is about making correct trade-offs,
+    not blindly adopting tools.
+    <ul>
+      <li>Designing APIs that remain stable as systems evolve</li>
+      <li>Choosing data stores based on access patterns</li>
+      <li>Using async messaging to isolate failures</li>
+      <li>Understanding JVM internals and concurrency models</li>
+      <li>Building observability from day one</li>
+    </ul>
+    I enjoy working close to the JVM — tuning memory, reducing GC pressure,
+    and leveraging <strong>Java 21 virtual threads</strong> for high-concurrency systems.
+  </div>
+</section>
+
+<!-- TECH -->
+<section>
+  <h2>Core Technology Stack</h2>
+  <div class="card tech-grid">
+    <div class="tech"><i class="devicon-java-plain"></i> Java 21 / Virtual Threads</div>
+    <div class="tech"><i class="devicon-spring-plain"></i> Spring Boot</div>
+    <div class="tech"><i class="devicon-docker-plain"></i> Docker</div>
+    <div class="tech"><i class="devicon-apachekafka-original"></i> Kafka</div>
+    <div class="tech"><i class="fas fa-exchange-alt"></i> RabbitMQ</div>
+    <div class="tech"><i class="devicon-redis-plain"></i> Redis</div>
+    <div class="tech"><i class="fas fa-network-wired"></i> Cassandra</div>
+    <div class="tech"><i class="devicon-mysql-plain"></i> MySQL</div>
+    <div class="tech"><i class="devicon-mongodb-plain"></i> MongoDB</div>
+    <div class="tech"><i class="fas fa-gateway"></i> APISIX Gateway</div>
+    <div class="tech"><i class="fas fa-lock"></i> JWT / Auth</div>
+    <div class="tech"><i class="fas fa-chart-line"></i> Grafana / Loki</div>
+  </div>
+</section>
+
+<!-- NIRVI ARCH -->
+<section>
+  <h2>NIRVI – Production-Grade Backend Architecture</h2>
+  <div class="card">
+    <p style="color:var(--muted)">
+      This diagram represents the real backend architecture I designed
+      and implemented for the NIRVI startup. The focus was on scalability,
+      fault isolation, asynchronous processing, and operational visibility.
+    </p>
+
+    <img src="/home/bhaskar/Downloads/Nirvi.jpg" alt="NIRVI Architecture" class="arch-img">
+
+    <ul>
+      <li>API Gateway (APISIX) for auth, routing, and rate limiting</li>
+      <li>Microservices for user, vendor, payment, order, and admin domains</li>
+      <li>Event-driven workflows using RabbitMQ</li>
+      <li>Redis for hot-path caching and DB protection</li>
+      <li>Order assignment engine for vendor/driver matching</li>
+      <li>Notification engines (Firebase + AI-based content)</li>
+      <li>Centralized logging with Grafana & Loki</li>
+    </ul>
+
+    <p style="margin-top:20px;color:var(--muted)">
+      All services were containerized with Docker, with CI/CD handled via GitHub
+      and deployments automated to VPS infrastructure.
+    </p>
+  </div>
+</section>
+
+<!-- NIRVI SERVICES -->
+<section>
+  <h2>NIRVI – Service Breakdown (Private Repositories)</h2>
+  <div class="card">
+    <p style="color:var(--muted)">
+      The source code is private due to business reasons, but the system
+      design and engineering decisions are production-grade.
+    </p>
+
+    <div class="nirvi-grid">
+      <div class="nirvi"><strong>User Service</strong><br>JWT, OTP, session lifecycle</div>
+      <div class="nirvi"><strong>Order Management</strong><br>Subscription state machine</div>
+      <div class="nirvi"><strong>Vendor Service</strong><br>Onboarding & pricing</div>
+      <div class="nirvi"><strong>Admin Backend</strong><br>Internal ops tooling</div>
+      <div class="nirvi"><strong>Notification Engine</strong><br>Kafka & Firebase</div>
+      <div class="nirvi"><strong>AI Notifications</strong><br>AI-generated content</div>
+      <div class="nirvi"><strong>Gateway Layer</strong><br>APISIX routing</div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section>
+  <h2>Professional Experience</h2>
+  <div class="card">
+    <strong>Equence Technologies</strong> — Software Engineer (2022–Present)
+    <ul>
+      <li>Built CPaaS messaging platforms at scale</li>
+      <li>Handled 5Cr+ API calls/day</li>
+      <li>Migrated services to Java 21 using virtual threads</li>
+      <li>Reduced error rates by 30% and improved performance by 25%</li>
+    </ul>
+
+    <strong>Iconic Etech</strong> — Java Developer (2021–2022)
+    <ul>
+      <li>JVM tuning, memory optimization</li>
+      <li>Backend feature development and bug fixing</li>
+    </ul>
+  </div>
+</section>
+
+<footer>
+  Backend Engineering · Distributed Systems · Ownership · Reliability
+</footer>
+
+</div>
+</body>
+</html>
